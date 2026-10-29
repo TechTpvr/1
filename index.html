@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html dir="rtl">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>باشگاه ورزشی فرخزاد</title>
     <style>
-        body {
-            background-color: white;
-            color: black;
-            margin: 0;
-            padding: 10px;
-        }
-      
-        header {
+        body{direction:rtl;}
+
+        header{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -20,12 +14,7 @@
             padding: 10px;
             border-radius: 15px;
         }
-        header img {
-            width: 100px;
-            height: 80px;
-        }
-      
-        nav {
+        nav{
             background-color: blue;
             color: white;
             text-align: center;
@@ -33,191 +22,143 @@
             margin-top: 10px;
             border-radius: 15px;
         }
-        nav a {
+        nav a{
             color: white;
-            cursor: pointer;
-            margin: 0 10px;
         }
-
-        
-        .row {
+        section{
             display: flex;
             gap: 20px;
-            margin-top: 10px;
             padding: 10px;
-            border: 2px solid gray;
+            margin-top: 10px;
+            border-style: solid;
             border-radius: 15px;
         }
-        .box {
+        article{
             flex: 1;
             text-align: center;
         }
-        .box img {
-            width: 90%;
-            height: 250px;
-        }
-
-        
-        footer {
+        footer{
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: blue;
             color: white;
-            margin-top: 10px;
             padding: 10px;
+            margin-top: 10px;
             border-radius: 15px;
         }
-        footer img {
+
+        .lo{
+            width: 100px;
+            height: 80px;
+            border-radius: 15px;
+        }
+        .im{
+            width: 90%;
+            height: 250px;
+            border-radius: 15px;
+        }
+        .lg{
             width: 40px;
             height: 40px;
         }
-
-        
-        .layer {
+        .p{
             display: none;
             position: fixed;
             top: 0;
             right: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-        .layer-box {
-            background-color: white;
-            color: black;
-            width: 350px;
-            margin: 150px auto;
-            padding: 20px;
+            background-color: lightgray;
             text-align: center;
-            border-radius: 15px;
+            padding-top: 100px;
+        }
+        .p:target{
+            display: block;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="pic/logo-watt.png">
+        <img src="pic/logo-watt.png" class="lo">
         <h1>باشگاه ورزشی فرخزاد</h1>
-        <img src="pic/b1.jpg">
+        <img src="pic/b1.jpg" class="lo">
     </header>
 
     <nav>
-        <a onclick="openLayer('contact')">تماس با ما</a>
+        <a href="#t">تماس با ما</a>
         |
-        <a onclick="openLayer('about')">درباره ما</a>
+        <a href="#a">درباره ما</a>
     </nav>
 
-    <div class="row">
-        <div class="box">
-            <p>
-                به باشگاه ورزشی فرخزاد خوش آمدید.
-                ما در این باشگاه امکانات ورزشی مناسب و مربیان حرفه ای
-                برای همه سنین فراهم کرده ایم. برای ثبت نام فرم کنار را پر کنید.
-            </p>
-        </div>
-        <div class="box">
-            <img src="pic/b2.jpg">
-        </div>
-    </div>
+    <main>
+        <section>
+            <article>
+                <p>
+                    به باشگاه ورزشی فرخزاد خوش آمدید.
+                    ما در این باشگاه امکانات ورزشی مناسب و مربیان حرفه ای
+                    برای همه سنین فراهم کرده ایم.
+                </p>
+            </article>
+            <article><img src="pic/b2.jpg" class="im"></article>
+        </section>
 
-    <div class="row">
-        <div class="box">
-            <img src="pic/b3.jpg">
-        </div>
-        <div class="box">
-            <h3>فرم ثبت نام</h3>
-            <table border="1" width="90%" align="center">
-                <tr>
-                    <td>نام</td>
-                    <td><input type="text" id="name"></td>
-                </tr>
-                <tr>
-                    <td>رمز عبور</td>
-                    <td><input type="password" id="pass"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="button" value="ثبت نام" onclick="register()">
-                        <input type="reset" value="پاک کردن">
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
+        <section>
+            <article><img src="pic/b3.jpg" class="im"></article>
+            <article>
+                <h3>فرم ثبت نام</h3>
+                <form action="#o" method="get">
+                    <table border="1" width="90%" align="center">
+                        <tr>
+                            <td>نام</td>
+                            <td><input type="text" name="name" required pattern="[آ-ی]{3,}" title="نام باید فارسی و بیشتر از ۲ حرف باشد"></td>
+                        </tr>
+                        <tr>
+                            <td>رمز عبور</td>
+                            <td><input type="password" name="pass" required pattern="[0-9]{10}" title="رمز عبور باید ۱۰ عدد انگلیسی باشد"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="ثبت نام"></td>
+                            <td><input type="reset" value="پاک کردن"></td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
+        </section>
+    </main>
 
     <footer>
-        <span>تمامی حقوق سایت محفوظ می باشد</span>
-        <span>
-            <img src="pic/eita.png">
-            <img src="pic/aparat.png">
-        </span>
+        <h4>تمامی حقوق سایت محفوظ می باشد</h4>
+        <div>
+            <img src="pic/eita.png" class="lg">
+            <img src="pic/aparat.png" class="lg">
+        </div>
     </footer>
 
-    
-    <div class="layer" id="contact">
-        <div class="layer-box">
-            <h3>تماس با ما</h3>
-            <p>09924523979</p>
-            <p>09981842307</p>
-            <input type="button" value="بستن" onclick="closeLayer('contact')">
-        </div>
+    <div class="p" id="t">
+        <h2>تماس با ما</h2>
+        <p>09924523979</p>
+        <p>09981842307</p>
+        <a href="#">بستن</a>
     </div>
 
-    
-    <div class="layer" id="about">
-        <div class="layer-box">
-            <h3>درباره ما</h3>
-            <p>
-                باشگاه ورزشی فرخزاد با هدف ارتقای سلامت و نشاط جامعه تاسیس شده است.
-                در این باشگاه رشته های مختلف ورزشی توسط مربیان با تجربه آموزش داده می شود.
-            </p>
-            <input type="button" value="بستن" onclick="closeLayer('about')">
-        </div>
+    <div class="p" id="a">
+        <h2>درباره ما</h2>
+        <p>
+            باشگاه ورزشی فرخزاد با هدف ارتقای سلامت و نشاط جامعه تاسیس شده است.
+            در این باشگاه رشته های مختلف ورزشی توسط مربیان با تجربه آموزش داده می شود.
+        </p>
+        <a href="#">بستن</a>
     </div>
 
-    
-    <div class="layer" id="ok">
-        <div class="layer-box">
-            <h3>ثبت نام شما با موفقیت انجام شد.</h3>
-            <p>رمز عبور: <span id="showPass"></span></p>
-            <p>برای استعلام وضعیت، با شماره ی زیر تماس بگیرید.</p>
-            <p>09924523979</p>
-            <input type="button" value="بستن" onclick="closeLayer('ok')">
-        </div>
+    <div class="p" id="o">
+        <h2>ثبت نام شما با موفقیت انجام شد.</h2>
+        <p>رمز عبور: .....</p>
+        <p>برای استعلام وضعیت، با شماره ی زیر تماس بگیرید.</p>
+        <p>09924523979</p>
+        <a href="#">بستن</a>
     </div>
-
-    <script>
-        function openLayer(id) {
-            document.getElementById(id).style.display = "block";
-        }
-
-        function closeLayer(id) {
-            document.getElementById(id).style.display = "none";
-        }
-
-        function register() {
-            var name = document.getElementById("name").value;
-            var pass = document.getElementById("pass").value;
-
-            
-            var persian = /^[آ-ی ]+$/;
-            if (name.length <= 2 || !persian.test(name)) {
-                alert("نام باید فارسی و بیشتر از ۲ حرف باشد");
-                return;
-            }
-
-            
-            var digits = /^[0-9]{10}$/;
-            if (!digits.test(pass)) {
-                alert("رمز عبور باید ۱۰ عدد انگلیسی باشد");
-                return;
-            }
-
-            document.getElementById("showPass").innerHTML = pass;
-            openLayer("ok");
-        }
-    </script>
 
 </body>
 </html>

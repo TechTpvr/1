@@ -1,164 +1,161 @@
-<html>
+<!DOCTYPE html><html>
 <head>
     <meta charset="UTF-8">
     <title>باشگاه ورزشی فرخزاد</title>
     <style>
-        body{direction:rtl;}
+        body{direction:rtl;}    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: gray;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    nav{
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+    nav a{
+        color: white;
+    }
+    section{
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        border-style: solid;
+        border-radius: 15px;
+    }
+    article{
+        flex: 1;
+        text-align: center;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
 
-        header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: gray;
-            color: white;
-            padding: 10px;
-            border-radius: 15px;
-        }
-        nav{
-            background-color: blue;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 15px;
-        }
-        nav a{
-            color: white;
-        }
-        section{
-            display: flex;
-            gap: 20px;
-            padding: 10px;
-            margin-top: 10px;
-            border-style: solid;
-            border-radius: 15px;
-        }
-        article{
-            flex: 1;
-            text-align: center;
-        }
-        footer{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: blue;
-            color: white;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 15px;
-        }
+    .lo{
+        width: 100px;
+        height: 80px;
+        border-radius: 15px;
+    }
+    .im{
+        width: 90%;
+        height: 250px;
+        border-radius: 15px;
+    }
+    .lg{
+        width: 40px;
+        height: 40px;
+    }
+    .p{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: lightgray;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .p:target{
+        display: block;
+    }
+</style>
 
-        .lo{
-            width: 100px;
-            height: 80px;
-            border-radius: 15px;
-        }
-        .im{
-            width: 90%;
-            height: 250px;
-            border-radius: 15px;
-        }
-        .lg{
-            width: 40px;
-            height: 40px;
-        }
-        .p{
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-color: lightgray;
-            text-align: center;
-            padding-top: 100px;
-        }
-        .p:target{
-            display: block;
-        }
-    </style>
 </head>
-<body>
+<body><header>
+    <img src="pic/logo-watt.png" class="lo">
+    <h1>باشگاه ورزشی فرخزاد</h1>
+    <img src="pic/b1.jpg" class="lo">
+</header>
 
-    <header>
-        <img src="pic/logo-watt.png" class="lo">
-        <h1>باشگاه ورزشی فرخزاد</h1>
-        <img src="pic/b1.jpg" class="lo">
-    </header>
+<nav>
+    <a href="#t">تماس با ما</a>
+    |
+    <a href="#a">درباره ما</a>
+</nav>
 
-    <nav>
-        <a href="#t">تماس با ما</a>
-        |
-        <a href="#a">درباره ما</a>
-    </nav>
+<main>
+    <section>
+        <article>
+            <p>
+                به باشگاه ورزشی فرخزاد خوش آمدید.
+                ما در این باشگاه امکانات ورزشی مناسب و مربیان حرفه ای
+                برای همه سنین فراهم کرده ایم.
+            </p>
+        </article>
+        <article><img src="pic/b2.jpg" class="im"></article>
+    </section>
 
-    <main>
-        <section>
-            <article>
-                <p>
-                    به باشگاه ورزشی فرخزاد خوش آمدید.
-                    ما در این باشگاه امکانات ورزشی مناسب و مربیان حرفه ای
-                    برای همه سنین فراهم کرده ایم.
-                </p>
-            </article>
-            <article><img src="pic/b2.jpg" class="im"></article>
-        </section>
+    <section>
+        <article><img src="pic/b3.jpg" class="im"></article>
+        <article>
+            <h3>فرم ثبت نام</h3>
+            <form action="#o" method="get">
+                <table border="1" width="90%" align="center">
+                    <tr>
+                        <td>نام</td>
+                        <td><input type="text" name="name" required pattern="[آ-ی]{3,}" title="نام باید فارسی و بیشتر از ۲ حرف باشد"></td>
+                    </tr>
+                    <tr>
+                        <td>رمز عبور</td>
+                        <td><input type="password" name="pass" required pattern="[0-9]{10}" title="رمز عبور باید ۱۰ عدد انگلیسی باشد"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="ثبت نام"></td>
+                        <td><input type="reset" value="پاک کردن"></td>
+                    </tr>
+                </table>
+            </form>
+        </article>
+    </section>
+</main>
 
-        <section>
-            <article><img src="pic/b3.jpg" class="im"></article>
-            <article>
-                <h3>فرم ثبت نام</h3>
-                <form action="#o" method="get">
-                    <table border="1" width="90%" align="center">
-                        <tr>
-                            <td>نام</td>
-                            <td><input type="text" name="name" required pattern="[آ-ی]{3,}" title="نام باید فارسی و بیشتر از ۲ حرف باشد"></td>
-                        </tr>
-                        <tr>
-                            <td>رمز عبور</td>
-                            <td><input type="password" name="pass" required pattern="[0-9]{10}" title="رمز عبور باید ۱۰ عدد انگلیسی باشد"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="submit" value="ثبت نام"></td>
-                            <td><input type="reset" value="پاک کردن"></td>
-                        </tr>
-                    </table>
-                </form>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <h4>تمامی حقوق سایت محفوظ می باشد</h4>
-        <div>
-            <img src="pic/eita.png" class="lg">
-            <img src="pic/aparat.png" class="lg">
-        </div>
-    </footer>
-
-    <div class="p" id="t">
-        <h2>تماس با ما</h2>
-        <p>09924523979</p>
-        <p>09981842307</p>
-        <a href="#">بستن</a>
+<footer>
+    <h4>تمامی حقوق سایت محفوظ می باشد</h4>
+    <div>
+        <img src="pic/eita.png" class="lg">
+        <img src="pic/aparat.png" class="lg">
     </div>
+</footer>
 
-    <div class="p" id="a">
-        <h2>درباره ما</h2>
-        <p>
-            باشگاه ورزشی فرخزاد با هدف ارتقای سلامت و نشاط جامعه تاسیس شده است.
-            در این باشگاه رشته های مختلف ورزشی توسط مربیان با تجربه آموزش داده می شود.
-        </p>
-        <a href="#">بستن</a>
-    </div>
+<div class="p" id="t">
+    <h2>تماس با ما</h2>
+    <p>09924523979</p>
+    <p>09981842307</p>
+    <a href="#">بستن</a>
+</div>
 
-    <div class="p" id="o">
-        <h2>ثبت نام شما با موفقیت انجام شد.</h2>
-        <p>رمز عبور: .....</p>
-        <p>برای استعلام وضعیت، با شماره ی زیر تماس بگیرید.</p>
-        <p>09924523979</p>
-        <a href="#">بستن</a>
-    </div>
+<div class="p" id="a">
+    <h2>درباره ما</h2>
+    <p>
+        باشگاه ورزشی فرخزاد با هدف ارتقای سلامت و نشاط جامعه تاسیس شده است.
+        در این باشگاه رشته های مختلف ورزشی توسط مربیان با تجربه آموزش داده می شود.
+    </p>
+    <a href="#">بستن</a>
+</div>
+
+<div class="p" id="o">
+    <h2>ثبت نام شما با موفقیت انجام شد.</h2>
+    <p>رمز عبور: .....</p>
+    <p>برای استعلام وضعیت، با شماره ی زیر تماس بگیرید.</p>
+    <p>09924523979</p>
+    <a href="#">بستن</a>
+</div>
 
 </body>
 </html>
